@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# script/setup
+#
+# (Re)initialize the build environment
+
+set -euo pipefail
+
+cd "$(dirname "${0}")/../"
+
+# Build container image
+docker build -t "bio-builder" - < ./script/Dockerfile

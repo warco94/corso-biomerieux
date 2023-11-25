@@ -1,0 +1,19 @@
+#!/bin/bash
+
+set -euo pipefail
+
+cd "$(dirname "$0")/.."
+
+# Script arguments are passed to oe-init-build-env and we don't want that.
+EXEC_ARGS=("${@}")
+shift "${#}"
+
+TEMPLATECONF="$(pwd)/sources/meta-biomerieux/conf/templates/default"
+export TEMPLATECONF
+
+set +eu
+. sources/poky/oe-init-build-env
+set -eu
+
+# shellcheck disable=SC2048
+exec ${EXEC_ARGS[*]}

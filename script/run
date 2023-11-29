@@ -8,12 +8,11 @@ cd "$(dirname "$0")/.."
 EXEC_ARGS=("${@}")
 shift "${#}"
 
-TEMPLATECONF="$(pwd)/sources/meta-biomerieux/conf/templates/default"
-export TEMPLATECONF
-
 set +eu
 . sources/poky/oe-init-build-env
 set -eu
+
+cp ../local.conf conf/
 
 # shellcheck disable=SC2048
 exec ${EXEC_ARGS[*]}

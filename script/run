@@ -15,5 +15,8 @@ set +eu
 . sources/poky/oe-init-build-env
 set -eu
 
+BIOS=/bsp/build/tmp/deploy/images/qemubiomerieux/u-boot.bin
+export BIOS
+
 # shellcheck disable=SC2048
 exec ${EXEC_ARGS[*]}

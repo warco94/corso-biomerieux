@@ -11,10 +11,10 @@ diff --git a/configs/qemu_biomerieux_defconfig b/configs/qemu_biomerieux_defconf
 index 3b019e4bbe..44b5981b15 100644
 --- a/configs/qemu_biomerieux_defconfig
 +++ b/configs/qemu_biomerieux_defconfig
-@@ -65,3 +65,4 @@ CONFIG_USB=y
+@@ -56,3 +56,4 @@ CONFIG_USB=y
+ CONFIG_DM_USB=y
  CONFIG_USB_EHCI_HCD=y
  CONFIG_USB_EHCI_PCI=y
- CONFIG_TPM=y
 +CONFIG_SYS_PROMPT="$> "
 -- 
 2.37.2
